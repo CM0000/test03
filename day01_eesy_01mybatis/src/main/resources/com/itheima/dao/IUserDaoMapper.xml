@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace为IUserDao的全限定类名-->
+<mapper namespace="com.itheima.dao.IUserDao">
+    <!--配置查询所有,id为IUserDao方法名，resultType返回的数据类型-->
+    <!--<select id="findAll" resultType="com.itheima.domain.User">
+        select * from user
+    </select>-->
+    <insert id="insert" parameterType="com.itheima.domain.User">
+        insert into user(username,birthday,sex,address) values(#{username},#{birthday},#{sex},#{address})
+    </insert>
+</mapper>
